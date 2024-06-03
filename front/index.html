@@ -309,7 +309,24 @@
     <div class="loader-container">
       <img src="https://raw.githubusercontent.com/KordePriyanka/Books4MU-Book-Store-Website-/main/image/loader-img.gif" alt="" />
     </div>
+    <script>
+      const url = 'http://localhost:5000/add-to-cart'; // Replace with your Node.js backend URL
+const data = {
+  productId: 'your-product-id',
+  quantity: 1
+};
 
+fetch(url, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json; charset=UTF-8'
+  },
+  body: JSON.stringify(data)
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+    </script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <!-- custom js file link  -->
