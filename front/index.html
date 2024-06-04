@@ -309,7 +309,22 @@
     <div class="loader-container">
       <img src="https://raw.githubusercontent.com/KordePriyanka/Books4MU-Book-Store-Website-/main/image/loader-img.gif" alt="" />
     </div>
+    <script>
+      const clearCartButtons = document.querySelectorAll('.clear-cart');
 
+clearCartButtons.forEach((button) => {
+  button.addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    const response = await fetch(/api/cart/clear, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
+    const data
+    </script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <!-- custom js file link  -->
